@@ -27,9 +27,8 @@ SDK projects: [unrealsdk](https://github.com/bl-sdk/unrealsdk), [pyunrealsdk](ht
 
 1. Close the game completely.
 2. Download [loot_magnet-0.2.0-native.zip](../dist/loot_magnet-0.2.0-native.zip) using GitHub's **Download raw file** button.
-3. Remove any older Loot Magnet installation from `sdk_mods` (move it outside that directory). Keep `sdk_mods/settings/loot_magnet.json` to preserve settings and statistics.
-4. Extract the **entire `loot_magnet` folder** from the archive into `<Borderlands 4>/sdk_mods/`.
-5. Start the game and enable Loot Magnet and BLImGui in the SDK mod menu.
+3. Extract the **entire `loot_magnet` folder** from the archive into `<Borderlands 4>/sdk_mods/`.
+4. Start the game and enable Loot Magnet and BLImGui in the SDK mod menu.
 
 The resulting layout must include:
 
@@ -40,7 +39,7 @@ Borderlands 4/
       __init__.py
 ```
 
-Extract the complete folder; do not rename the ZIP to `.sdkmod`. Install only one copy of the mod. Disable other loot magnets and auto-selling mods while testing.
+Extract the complete folder. Disable other loot magnets and auto-selling mods while testing.
 
 ## Controls
 
