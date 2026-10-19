@@ -4,7 +4,7 @@
 
 Loot Magnet brings nearby drops to your character and can collect equipment into your backpack. It has two independently configured actions: **Loot Magnet** keeps items, while **Trash Magnet** collects and sells matching items when you press its key.
 
-**Version 0.2.0 is an experimental Windows x64 build.** It uses the standard SDK plus a small native helper included with the mod; replacing the SDK DLLs is not required.
+**Version 0.2.0 is an experimental Windows x64 build.**
 
 ## Features
 
@@ -18,7 +18,7 @@ Loot Magnet brings nearby drops to your character and can collect equipment into
 ## Requirements
 
 - Borderlands 4 on Windows x64.
-- The BL4 Python SDK, including `mods_base`. This build targets Python 3.14 and unrealsdk 3.2.0, commit `b1852aa4`. Other SDK revisions are not supported by the native helper.
+- The BL4 Python SDK, including `mods_base` (Python 3.14, unrealsdk 3.2.0).
 - [BLImGui](https://github.com/juso40/blimgui) for the settings and statistics windows.
 
 SDK projects: [unrealsdk](https://github.com/bl-sdk/unrealsdk), [pyunrealsdk](https://github.com/bl-sdk/pyunrealsdk). Install the SDK and BLImGui using their upstream instructions first.
@@ -38,12 +38,9 @@ Borderlands 4/
   sdk_mods/
     loot_magnet/
       __init__.py
-      native/
-        loot_native_bridge.dll
-        build-manifest.json
 ```
 
-Do not rename the ZIP to `.sdkmod`: the native DLL must be extracted onto disk. Install only one copy of the mod. Disable other loot magnets and auto-selling mods while testing.
+Extract the complete folder; do not rename the ZIP to `.sdkmod`. Install only one copy of the mod. Disable other loot magnets and auto-selling mods while testing.
 
 ## Controls
 
@@ -65,16 +62,16 @@ Only one immediately appearing backpack ID per pickup request qualifies for sale
 
 ## Current limits and validation
 
-- Single-item native pickup was confirmed in game on the original SDK DLL pair. The complete F6/F8 batch workflow on that SDK still needs in-game validation; local mock and ABI tests do not emulate the engine.
-- Pickup reads a game-build-specific field offset. A game update can break compatibility even when the class size is unchanged. The helper rejects known SDK/parameter-layout mismatches.
+- The complete F6/F8 batch workflow still needs in-game validation.
+- Game updates may affect compatibility.
 - At most 100 nearby matching objects are processed per action. Leave room in your backpack; free equipped-weapon slots are not required for backpack pickup.
 - Excess ammo is not deleted. Consumables are moved for the game's contact pickup rather than directly inserted into inventory.
 - Unknown-rarity gear is only moved when all rarities are enabled; Pick up all gear can attempt to collect it without selling.
 - Co-op behavior is unverified. Statistics are shared by both magnets; this is not a per-item journal.
 - Full item serial extraction and filters based on individual item parts are still research work and are not included.
 
-## Source and native helper
+## Source
 
-Python source is in `loot_magnet/`. The complete helper source and build notes are in [`loot_magnet/native/source/`](loot_magnet/native/source/BUILD.md). The archive includes the compiled helper and its SHA-256 manifest. Game binaries, SDK DLLs, save files and research dumps are not distributed here.
+The mod source is in `loot_magnet/`.
 
-See [third-party notices](loot_magnet/licenses/THIRD-PARTY.md) for SDK licensing. This is a community mod by [max0n4ik](https://github.com/max0n4ik), not an official SDK or game release.
+See [third-party notices](loot_magnet/licenses/THIRD-PARTY.md) for dependency licensing. Author: [max0n4ik](https://github.com/max0n4ik).
