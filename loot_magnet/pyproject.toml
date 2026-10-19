@@ -1,0 +1,9 @@
+[project]
+name = "loot_magnet"
+version = "0.2.0"
+description = "Independent Loot and Trash Magnets with native pickup on the standard BL4 SDK."
+
+[tool.sdkmod]
+name = "Loot Magnet"
+supported_games = ["BL4"]
+coop_support = "Unknown"
