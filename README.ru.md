@@ -77,4 +77,4 @@ Borderlands 4/
 
 Python-код находится в `loot_magnet/`. Полный исходник помощника и инструкции сборки — в [`loot_magnet/native/source/`](loot_magnet/native/source/BUILD.md). Архив содержит собранный помощник и манифест SHA-256. Игровые бинарники, DLL SDK, сохранения и исследовательские дампы не публикуются.
 
-Лицензии SDK описаны в [THIRD-PARTY.md](loot_magnet/licenses/THIRD-PARTY.md). При разработке использовался OpenAI Codex. Автор — [max0n4ik](https://github.com/max0n4ik). Это мод сообщества, а не официальный выпуск SDK или игры.
+Лицензии SDK описаны в [THIRD-PARTY.md](loot_magnet/licenses/THIRD-PARTY.md). Автор — [max0n4ik](https://github.com/max0n4ik). Это мод сообщества, а не официальный выпуск SDK или игры.

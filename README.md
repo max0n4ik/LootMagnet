@@ -77,4 +77,4 @@ Only one immediately appearing backpack ID per pickup request qualifies for sale
 
 Python source is in `loot_magnet/`. The complete helper source and build notes are in [`loot_magnet/native/source/`](loot_magnet/native/source/BUILD.md). The archive includes the compiled helper and its SHA-256 manifest. Game binaries, SDK DLLs, save files and research dumps are not distributed here.
 
-See [third-party notices](loot_magnet/licenses/THIRD-PARTY.md) for SDK licensing. Development used OpenAI Codex. This is a community mod by [max0n4ik](https://github.com/max0n4ik), not an official SDK or game release.
+See [third-party notices](loot_magnet/licenses/THIRD-PARTY.md) for SDK licensing. This is a community mod by [max0n4ik](https://github.com/max0n4ik), not an official SDK or game release.
